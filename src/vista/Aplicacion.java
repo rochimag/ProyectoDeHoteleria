@@ -36,7 +36,7 @@ public class Aplicacion {
                     break;
                 case 2:
                     if(empresa.getEmpresa().size()==0){
-                        System.out.println("No hay MEDIOS DE ALOJAMIENTO :/");
+                        System.out.println("No hay MEDIOS DE ALOJAMIENTO");
                     }else{
                         System.out.println(empresa.mediosDeAlojamiento());
                     }
@@ -65,7 +65,7 @@ public class Aplicacion {
     }
 
     public static int menu(){
-        System.out.println("**********EMPRESA TURISMO :D *********");
+        System.out.println("**********EMPRESA TURISMO*********");
         System.out.println("1.\tIngresar Medio de Alojamiento ");
         System.out.println("2.\tMostrar Medios de Alojamiento");
         System.out.println("3.\tDatos de un cliente X");
