@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6fa99040-295c-4f6d-b634-349f1d80ec98" name="Changes" comment="se actualiza gitignore">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vista/Aplicacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vista/Aplicacion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controlador/EmpresaTurismo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controlador/EmpresaTurismo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

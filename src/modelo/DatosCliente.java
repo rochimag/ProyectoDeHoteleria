@@ -2,11 +2,11 @@ package modelo;
 
 public class DatosCliente {
     private String nombre;
-    private int rutCliente;
+    private String rutCliente;
 
 
 
-    public DatosCliente(String nombre, int rutCliente) {
+    public DatosCliente(String nombre, String rutCliente) {
         this.nombre = nombre;
         this.rutCliente = rutCliente;
     }
@@ -22,11 +22,12 @@ public class DatosCliente {
         this.nombre = nombre;
     }
 
-    public int getRutCliente() {
+    public String getRutCliente() {
         return rutCliente;
     }
 
-    public void setRutCliente(int rutCliente) {
+    public void setRutCliente(String rutCliente) {
         this.rutCliente = rutCliente;
     }
 }
+

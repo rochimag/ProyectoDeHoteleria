@@ -3,13 +3,24 @@ package modelo;
 public abstract class Hospederia extends MedioDeAlojamiento{
 
     private boolean esFumador;
+    private int capacidad;
 
     public Hospederia() {
     }
 
-    public Hospederia(DatosCliente datoCliente, int cantidadDeNoches, int valorBaseNoche, String tipoTemporada, boolean esFumador) {
-        super(datoCliente, cantidadDeNoches, valorBaseNoche, tipoTemporada);
+
+    public Hospederia(DatosCliente datoCliente, int cantidadDeNoches, int valorBaseNoche, String tipoDeMedioDeAlojamiento, String tipoTemporada, boolean esFumador, int capacidad) {
+        super(datoCliente, cantidadDeNoches, valorBaseNoche, tipoDeMedioDeAlojamiento, tipoTemporada);
         this.esFumador = esFumador;
+        this.capacidad = capacidad;
+    }
+
+    public int getCapacidad() {
+        return capacidad;
+    }
+
+    public void setCapacidad(int capacidad) {
+        this.capacidad = capacidad;
     }
 
     public boolean isEsFumador() {
@@ -20,16 +31,15 @@ public abstract class Hospederia extends MedioDeAlojamiento{
         this.esFumador = esFumador;
     }
 
-    /*adicional: devolverá el valor adicional, que corresponde al 30% del subtotal si es Fumador y con desayuno.*/
-    public abstract int valorAdicional();
 
-    /*valorACancelar: devolverá el valor a cancelar, el cual al subtotal
-    se le debe descontar el bono y sumar el adicional,
-    donde corresponda*/
-    public abstract int valorACancelar();
+    /*adicional: devolverá el valor adicional, que corresponde al 30% del subtotal si es Fumador y con desayuno.*/
+    /*public abstract  int valorAdicional();
+
+
 
     @Override
     public int incrementaValorBase() {
         return 0;
-    }
+    }*/
+
 }

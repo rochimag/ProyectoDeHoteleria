@@ -9,8 +9,8 @@ public class Carpa extends MedioDeAlojamiento{
     public Carpa() {
     }
 
-    public Carpa(DatosCliente datoCliente, int cantidadDeNoches, int valorBaseNoche, String tipoTemporada, int cantidadPersonas) {
-        super(datoCliente, cantidadDeNoches, valorBaseNoche, tipoTemporada);
+    public Carpa(DatosCliente datoCliente, int cantidadDeNoches, int valorBaseNoche, String tipoDeMedioDeAlojamiento, String tipoTemporada, int cantidadPersonas) {
+        super(datoCliente, cantidadDeNoches, valorBaseNoche, tipoDeMedioDeAlojamiento, tipoTemporada);
         this.cantidadPersonas = cantidadPersonas;
     }
 
@@ -24,7 +24,7 @@ public class Carpa extends MedioDeAlojamiento{
 
 
     /*incrementaValorBase: aumenta el valor base en un 18%
-    si la capacidad de la cabaña es superior a 5.*/
+    si la capacidad de la cabaña es superior a 5.
     @Override
     public int incrementaValorBase() {
         int incrementoValorBase=0;
@@ -33,5 +33,9 @@ public class Carpa extends MedioDeAlojamiento{
             return incrementoValorBase;
         }
         return incrementoValorBase;
+    }*/
+    @Override
+    public int valorACancelar() {
+        return this.subTotal() - bonoDescuento();
     }
 }

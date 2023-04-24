@@ -5,17 +5,21 @@ public abstract class MedioDeAlojamiento {
     private DatosCliente datoCliente;
     private int cantidadDeNoches;
     private int valorBaseNoche;
+    private String tipoDeMedioDeAlojamiento;
     private String tipoTemporada;
 
-    public MedioDeAlojamiento(DatosCliente datoCliente, int cantidadDeNoches, int valorBaseNoche, String tipoTemporada) {
+    public MedioDeAlojamiento(DatosCliente datoCliente, int cantidadDeNoches, int valorBaseNoche, String tipoDeMedioDeAlojamiento, String tipoTemporada) {
         this.datoCliente = datoCliente;
         this.cantidadDeNoches = cantidadDeNoches;
         this.valorBaseNoche = valorBaseNoche;
+        this.tipoDeMedioDeAlojamiento = tipoDeMedioDeAlojamiento;
         this.tipoTemporada = tipoTemporada;
     }
 
     public MedioDeAlojamiento() {
     }
+
+    //getters y setters
 
     public DatosCliente getDatoCliente() {
         return datoCliente;
@@ -23,6 +27,14 @@ public abstract class MedioDeAlojamiento {
 
     public void setDatoCliente(DatosCliente datoCliente) {
         this.datoCliente = datoCliente;
+    }
+
+    public int getValorBaseNoche() {
+        return valorBaseNoche;
+    }
+
+    public void setValorBaseNoche(int valorBaseNoche) {
+        this.valorBaseNoche = valorBaseNoche;
     }
 
     public int getCantidadDeNoches() {
@@ -33,12 +45,12 @@ public abstract class MedioDeAlojamiento {
         this.cantidadDeNoches = cantidadDeNoches;
     }
 
-    public int getValorBaseNoche() {
-        return valorBaseNoche;
+    public String getTipoDeMedioDeAlojamiento() {
+        return tipoDeMedioDeAlojamiento;
     }
 
-    public void setValorBaseNoche(int valorBaseNoche) {
-        this.valorBaseNoche = valorBaseNoche;
+    public void setTipoDeMedioDeAlojamiento(String tipoDeMedioDeAlojamiento) {
+        this.tipoDeMedioDeAlojamiento = tipoDeMedioDeAlojamiento;
     }
 
     public String getTipoTemporada() {
@@ -66,13 +78,14 @@ public abstract class MedioDeAlojamiento {
             valorADescontar = (int) (this.subTotal() * 12.5 / 100);
             return valorADescontar;
         } else {
-            System.out.println("no se puede realizar descuento porque es temporada alta");
+            System.out.println("no  se puede realizar descuento porque es temporada alta");
         }
         return valorADescontar;
     }
 
     /*incrementaValorBase: aumenta el valor base en un 18%
-    si la capacidad de la cabaña es superior a 5.*/
-    public abstract int incrementaValorBase();
-}
+    si la capacidad de la cabaña es superior a 5.
+    public abstract int incrementaValorBase();*/
 
+    public abstract int valorACancelar();
+}

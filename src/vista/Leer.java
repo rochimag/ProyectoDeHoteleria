@@ -5,10 +5,10 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 class Leer
-{ public static String dato()
-{ String sdato="";
+{	public static String dato()
+{	String sdato="";
     try
-    { InputStreamReader isr=new InputStreamReader(System.in);
+    {	InputStreamReader isr=new InputStreamReader(System.in);
         BufferedReader flujoe=new BufferedReader(isr);
         sdato=flujoe.readLine();
     }
@@ -34,7 +34,7 @@ class Leer
     public static int datoInt()
     {
         try
-        { return (Integer.parseInt(dato()));
+        {	return (Integer.parseInt(dato()));
         }
         catch(NumberFormatException error)
         {
@@ -44,7 +44,7 @@ class Leer
     public static byte datoByte()
     {
         try
-        { return (Byte.parseByte(dato()));
+        {	return (Byte.parseByte(dato()));
         }
         catch(NumberFormatException error)
         {
@@ -54,7 +54,7 @@ class Leer
     public static boolean datoBoolean()
     {
         try
-        { return (Boolean.parseBoolean(dato()));
+        {	return (Boolean.parseBoolean(dato()));
         }
         catch(NumberFormatException error)
         {
@@ -86,7 +86,7 @@ class Leer
     public static float datoFloat()
     {
         try
-        { Float f =new Float(dato());
+        {	Float f =new Float(dato());
             return (f.floatValue());
         }
         catch(NumberFormatException error)
@@ -97,7 +97,7 @@ class Leer
     public static double datoDouble()
     {
         try
-        { Double f =new Double(dato());
+        {	Double f =new Double(dato());
             return (f.doubleValue());
         }
         catch(NumberFormatException error)
